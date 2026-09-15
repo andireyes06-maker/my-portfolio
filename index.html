@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my--portfolio</title>
+    <title>Franz Adriene Aclon — Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Static duplicate of the Contact form so Netlify's build-time HTML
+         scan can detect and register it; the React form handles the real
+         submission. Netlify ignores this form's own submissions since it's
+         never actually shown or submitted by a visitor. -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
