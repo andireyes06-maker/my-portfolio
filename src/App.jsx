@@ -38,7 +38,7 @@ function App() {
             <div className="relative">
               <div className="decor-hatch absolute -top-4 -right-4 w-full h-full rounded-sm" />
               <img
-                src="/portrait.png"
+                src={`${import.meta.env.BASE_URL}portrait.png`}
                 alt="Portrait of Franz Adriene Aclon"
                 className="relative w-full aspect-[3/4] object-cover rounded-sm border border-rule"
               />

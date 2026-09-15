@@ -8,7 +8,7 @@ const projects = [
     detail:
       "Built the assessment interface, database, scoring logic, and reporting workflow for a client's leadership program.",
     tags: ["Web application", "Database", "Netlify"],
-    images: ["/projects/tq-assessment.png"],
+    images: ["projects/tq-assessment.png"],
     note: "Private client project",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     lead: "A free, automated wellbeing check for a client's audience.",
     detail: "Built end to end — from response, to scoring, to automatic follow-up.",
     tags: ["Netlify", "Automation"],
-    images: ["/projects/burnout-force.png"],
+    images: ["projects/burnout-force.png"],
     link: "https://burnoutforce.higherperformancegroup.com",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     lead: "A marketing site rebuilt from design into a real, maintainable product.",
     detail: "Site architecture, page templates, and content structure — the homepage and one of its solutions pages, shown here.",
     tags: ["Marketing site"],
-    images: ["/projects/hpg-preview-home.png", "/projects/hpg-preview-solutions.png"],
+    images: ["projects/hpg-preview-home.png", "projects/hpg-preview-solutions.png"],
     link: "https://higherperformancegroup.com",
   },
 ]
@@ -38,7 +38,7 @@ function ProjectRow({ project, index }) {
       {project.images.map((src) => (
         <img
           key={src}
-          src={src}
+          src={`${import.meta.env.BASE_URL}${src}`}
           alt={`Screenshot of ${project.title}`}
           className="w-full rounded-sm border border-rule object-cover aspect-video group-hover:border-accent/50 transition-colors duration-300"
         />
