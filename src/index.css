@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  /* Surface — warm paper cream */
+  --bg: #f3efe6;
+  --bg-raised: #ece5d6;
+
+  /* Foreground — warm near-black ink */
+  --fg: #1c1a17;
+  --fg-muted: #6b6355;
+
+  /* Line */
+  --rule: #6b635533;
+
+  /* Accent — warm rust red */
+  --accent: #b3402e;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-raised: var(--bg-raised);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+}
