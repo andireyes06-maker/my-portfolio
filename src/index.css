@@ -1,19 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  /* Surface — warm paper cream */
-  --bg: #f3efe6;
-  --bg-raised: #ece5d6;
+  /* Surface — pale cool blue-white */
+  --bg: #eef3f8;
+  --bg-raised: #e3ebf3;
 
-  /* Foreground — warm near-black ink */
-  --fg: #1c1a17;
-  --fg-muted: #6b6355;
+  /* Foreground — deep navy */
+  --fg: #1c2b4a;
+  --fg-muted: #4a5872;
 
   /* Line */
-  --rule: #6b635533;
+  --rule: #1c2b4a26;
 
-  /* Accent — warm rust red */
-  --accent: #b3402e;
+  /* Accent — vivid purple (primary), soft teal (secondary) */
+  --accent: #6d28d9;
+  --accent-secondary: #5ec8d8;
+
+  /* Display typeface — headings only, body stays system-ui */
+  --font-display: "Lora", ui-serif, Georgia, serif;
+
+  /* Focus ring — overridden per-section where the default would lose contrast */
+  --focus: var(--accent);
 }
 
 @theme inline {
@@ -23,10 +30,35 @@
   --color-fg-muted: var(--fg-muted);
   --color-rule: var(--rule);
   --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --font-display: var(--font-display);
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
   -webkit-font-smoothing: antialiased;
+}
+
+.decor-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--accent-secondary) 0,
+    var(--accent-secondary) 1px,
+    transparent 1px,
+    transparent 9px
+  );
+  opacity: 0.4;
+}
+
+#contact {
+  --focus: var(--accent-secondary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
