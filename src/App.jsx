@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import { SECTION_CONTAINER } from "./constants";
 
@@ -49,6 +50,7 @@ function App() {
         </section>
         <Projects />
         <About />
+        <Skills />
         <Contact />
       </main>
     </div>
